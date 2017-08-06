@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="lt-ie9"> <![endif]-->
+<html lang="en">
+<head>
+    <!-- UTF8 -->
+    <meta charset="utf-8"/>
+    <!-- Required webpage title -->
+    <title> Words </title>
+    <!-- [SEO] Metadata -->
+    <meta name="author" content="Matheus Avellar"/>
+    <meta name="description" content="TODO"/>
+    <!-- Obligatory viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Disable automatic phone number detection (iOS8) -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- Activate ClearType on Mobile IE for smoother fonts -->
+    <meta http-equiv="cleartype" content="on"/>
+    <!-- Mobile color theme -->
+    <meta name="theme-color" content="#eeeeee"/>
+    <meta name="msapplication-navbutton-color" content="#eeeeee"/>
+    <!-- Allow web app to be run in full-screen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- Configure the status bar -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Open Graph (Facebook) -->
+    <meta property="og:title" content="Words"/>
+    <meta property="og:image" content="dird.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="TODO"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url" content="https://avellar.ml"/>
+    <!-- Twitter Cards -->
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="@avll0"/>
+    <meta property="twitter:title" content="Words"/>
+    <meta property="twitter:description" content="TODO"/>
+    <meta property="twitter:image" content="https://www.avellar.ml/dird.jpg"/>
+    <!-- iPhone 6 Plus -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.avellar.ml/ico/apple-touch-icon-180x180.png"/>
+    <!-- iPad retina touch icon (iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.avellar.ml/ico/apple-touch-icon-152x152.png"/>
+    <!-- iPad retina (iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.avellar.ml/ico/apple-touch-icon-144x144.png"/>
+    <!-- iPhone retina touch icon (iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.avellar.ml/ico/apple-touch-icon-120x120.png"/>
+    <!-- iPhone retina touch icon (iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.avellar.ml/ico/apple-touch-icon-114x114.png"/>
+    <!-- iPad touch icon (non-retina / iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76"   href="https://www.avellar.ml/ico/apple-touch-icon-76x76.png"/>
+    <!-- iPad touch icon (non-retina / iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="https://www.avellar.ml/ico/apple-touch-icon-72x72.png"/>
+    <!-- iPhone touch icon (non-retina / iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="60x60"   href="https://www.avellar.ml/ico/apple-touch-icon-60x60.png"/>
+    <!-- Standard iOS home screen (iPod Touch, iPhone first generation to 3G -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"   href="https://www.avellar.ml/ico/apple-touch-icon-57x57.png"/>
+    <!-- Android Chrome (M31+) -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-196x196.png" sizes="196x196"/>
+    <!-- Android material standarization of 48px units -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-192x192.png" sizes="192x192"/>
+    <!-- GoogleTV icon -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-96x96.png"   sizes="96x96"/>
+    <!-- New tab page in IE; Taskbar button in Windows 7+; Safari Reading List sidebar -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-32x32.png"   sizes="32x32"/>
+    <!-- Standard for most browsers -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-16x16.png"   sizes="16x16"/>
+    <!-- Chrome Web store app icon; Android icon (low-res) -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-128.png"     sizes="128x128"/>
+    <!-- Android default name for pinned website -->
+    <meta name="application-name" content="Words"/>
+    <!-- IE10 Metro tile for pinned website -->
+    <meta name="msapplication-tooltip" content="avellar.ml"/>
+    <meta name="msapplication-config" content="https://www.avellar.ml/ico/ieconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#eeeeee"/>
+    <meta name="msapplication-TileImage" content="https://www.avellar.ml/ico/mstile-144x144.png"/>
+    <!-- Windows 8.1 Metro tile image (small) -->
+    <meta name="msapplication-square70x70logo"   content="https://www.avellar.ml/ico/mstile-70x70.png"/>
+    <!-- Windows 8.1 Metro tile image (square) -->
+    <meta name="msapplication-square150x150logo" content="https://www.avellar.ml/ico/mstile-150x150.png"/>
+    <!-- Windows 8.1 Metro tile image (wide) -->
+    <meta name="msapplication-wide310x150logo"   content="https://www.avellar.ml/ico/mstile-310x150.png"/>
+    <!-- Windows 8.1 Metro tile image (large) -->
+    <meta name="msapplication-square310x310logo" content="https://www.avellar.ml/ico/mstile-310x310.png"/>
+    <!-- Setting up relative links throughout the website -->
+    <base href="https://avellar.ml/" target="_blank"/>
+    <style type="text/css">
+        @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        @import url('https://fonts.googleapis.com/css?family=Raleway');
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            outline: 0;
+            list-style: none;
+            font-weight: normal;
+            text-decoration: none;
+            box-sizing: border-box;
+            background: transparent;
+            vertical-align: middle;
+            -webkit-text-decoration-skip: ink;
+        }
+        #outdated {
+            display: none;
+        }
+        .lt-ie9 #outdated {
+            display: block;
+            display: block !important;
+        }
+        #outdated h1 {  font-size: 30px;  }
+        #outdated p, #outdated a {  font-size: 22px;  }
+        .lt-ie9 #main {
+            display: none;
+            display: none !important;
+        }
+        body {
+            font-family: "Raleway", "Nanum Gothic", sans-serif;
+            overflow: hidden;
+            background-color: #f7f7f7;
+        }
+        #main {
+            height: calc(80vh - 40px);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        hr {
+            height: 1px;
+            width: 100%;
+            display: inline-block;
+            background-color: #d1d1d1; /* light */
+            z-index: 0;
+        }
+        #footer, #header {
+            font-size: 16px;
+            color: #939393; /* inactive */
+            height: 10vh;
+            line-height: 10vh;
+            vertical-align: middle;
+            padding: 0 10%;
+        }
+        #footer span {
+            font-size: 16px;
+            color: #dfb3b3;
+        }
+        #words-list {
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #words-list ul li {
+            max-width: 200px;
+            width: 150px;
+            height: 100px;
+            margin: 1vh 0.5vw;
+            background-color: #eee;
+            line-height: 100px;
+            user-select: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all .1s cubic-bezier(.5, -.5, .5, 1.5);
+        }
+        #words-list ul li.done {
+            opacity: 0.2;
+            cursor: default;
+        }
+        #words-list ul li.selected {
+            background-color: #b2dfdb; /* accent */
+            transform: scale(0.95);
+        }
+        h1 {
+            text-align: center;
+            font-size: 20px;
+        }
+        #finish {
+            position: absolute;
+            width: 100%;
+            height: calc((15vw + 15vh) / 2);
+            background-color: #b5e6a4; /* green */
+            line-height: calc((15vw + 15vh) / 2);
+            font-size: calc((3.5vw + 3.5vh) / 2);
+            z-index: 1;
+            opacity: .85;
+            user-select: none;
+            cursor: default;
+            text-transform: uppercase;
+        }
+        #next {
+            font-size: calc((1.75vw + 1.75vh) / 2);
+            text-transform: lowercase;
+            position: absolute;
+            bottom: 3%;
+            max-width: 200px;
+            width: 150px;
+            padding: 20px;
+            background-color: #b2dfdb; /* accent */
+            cursor: pointer;
+            border-bottom: 3px solid #8dc3c5;
+            transition: all .1s ease;
+            font-family: "Raleway", "Nanum Gothic", sans-serif;
+        }
+        #next:active {
+            transform: translateY(3px);
+            border-bottom: 0px solid #8dc3c5;
+        }
+        [data-complete]:not([data-complete="1"]) #next,
+        [data-complete="0"] #finish {  display: none;  }
+
+        .flag {
+            width: 100%;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="preload" onload="new_level();">
+    <div id="outdated">
+        <h1> Your browser does not support basic features required to display this webpage. </h1>
+        <p> For security reasons, you should update it to a newer version. </p>
+        <p> <a href="https://www.google.com/chrome/">Google Chrome</a> </p>
+        <p> <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> </p>
+        <p> <a href="https://support.microsoft.com/pt-br/help/17621/internet-explorer-downloads">Internet Explorer</a> </p>
+    </div>
+    <div id="header">
+        <h1> Match the words! </h1>
+    </div>
+    <hr/>
+    <div id="main" data-complete="0">
+        <div id="finish"> Done! </div>
+        <div id="words-list">
+            <!-- TODO: stop ripping off people's flags and host my own -->
+            <ul data-lang="br">
+                <figure class="flag" style="background-image: url(https://lipis.github.io/flag-icon-css/flags/4x3/br.svg);"></figure>
+            </ul>
+            <ul data-lang="en">
+                <figure class="flag" style="background-image: url(https://lipis.github.io/flag-icon-css/flags/4x3/us.svg);"></figure>
+            </ul>
+            <ul data-lang="fr">
+                <figure class="flag" style="background-image: url(https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg);"></figure>
+            </ul>
+            <ul data-lang="ko">
+                <figure class="flag" style="background-image: url(https://lipis.github.io/flag-icon-css/flags/4x3/kr.svg);"></figure>
+            </ul>
+            <ul data-lang="it">
+                <figure class="flag" style="background-image: url(https://lipis.github.io/flag-icon-css/flags/4x3/it.svg);"></figure>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            let copy_object = function(obj) {
+                return JSON.parse(JSON.stringify(obj));
+            }
+
+            let ruby_active = true;
+            let done_count = 0;
+            let finish_amount = 0;
+            let main = document.getElementById("main");
+            let words_list = document.getElementById("words-list");
+            const WORD_AMOUNT = 4;
+            let selected_languages = [
+                "br", "en", "fr", "ko", "it"
+            ];
+            const LANGUAGES = {
+                "br": -1,
+                "en": -1,
+                "fr": -1,
+                "ko": -1,
+                "it": -1
+            };
+            let selected_words = copy_object(LANGUAGES);
+            let available_words = [
+                // Multiples of 4
+                //>>>>>>>>
+                [   {  lang: "br", word: "maçã",  ruby: []  },
+                    {  lang: "en", word: "apple", ruby: []  },
+                    {  lang: "fr", word: "pomme", ruby: []  },
+                    {  lang: "ko", word: "사과",   ruby: ["sa","gwa"]  },
+                    {  lang: "it", word: "mela",  ruby: []  }
+                ],
+                [   {  lang: "br", word: "peixe",    ruby: []  },
+                    {  lang: "en", word: "fish",     ruby: []  },
+                    {  lang: "fr", word: "poissant", ruby: []  },
+                    {  lang: "ko", word: "물고기",    ruby: ["mul","ko","gi"]  },
+                    {  lang: "it", word: "pesce", ruby: []  }
+                ],
+                [   {  lang: "br", word: "mesa",   ruby: []  },
+                    {  lang: "en", word: "table",  ruby: []  },
+                    {  lang: "fr", word: "table",  ruby: []  },
+                    {  lang: "ko", word: "테이블",  ruby: ["te","i","bul"]  },
+                    {  lang: "it", word: "tavolo", ruby: []  }
+                ],
+                [   {  lang: "br", word: "carne",  ruby: []  },
+                    {  lang: "en", word: "meat",   ruby: []  },
+                    {  lang: "fr", word: "viande", ruby: []  },
+                    {  lang: "ko", word: "고기",    ruby: ["ko","gi"]  },
+                    {  lang: "it", word: "carne",  ruby: []  }
+                ],
+                //<<<<<<<<
+
+                //>>>>>>>>
+                [   {  lang: "br", word: "água",  ruby: []  },
+                    {  lang: "en", word: "water", ruby: []  },
+                    {  lang: "fr", word: "eau",   ruby: []  },
+                    {  lang: "ko", word: "물",    ruby: ["mul"]  },
+                    {  lang: "it", word: "acqua", ruby: []  }
+                ],
+                [   {  lang: "br", word: "pássaro", ruby: []  },
+                    {  lang: "en", word: "bird",    ruby: []  },
+                    {  lang: "fr", word: "oiseau",  ruby: []  },
+                    {  lang: "ko", word: "새",      ruby: ["se"]  },
+                    {  lang: "it", word: "uccello", ruby: []  }
+                ],
+                [   {  lang: "br", word: "arroz", ruby: []  },
+                    {  lang: "en", word: "rice",  ruby: []  },
+                    {  lang: "fr", word: "riz",   ruby: []  },
+                    {  lang: "ko", word: "밥",    ruby: ["pap"]  },
+                    {  lang: "it", word: "riso",  ruby: []  }
+                ],
+                [   {  lang: "br", word: "chuva",   ruby: []  },
+                    {  lang: "en", word: "rain",    ruby: []  },
+                    {  lang: "fr", word: "pluie",   ruby: []  },
+                    {  lang: "ko", word: "비",      ruby: ["pi"]  },
+                    {  lang: "it", word: "pioggia", ruby: []  }
+                ],
+                //<<<<<<<<
+
+                //>>>>>>>>
+                [   {  lang: "br", word: "gato",  ruby: []  },
+                    {  lang: "en", word: "cat",   ruby: []  },
+                    {  lang: "fr", word: "chat",  ruby: []  },
+                    {  lang: "ko", word: "고양이", ruby: ["ku","yang","i"]  },
+                    {  lang: "it", word: "gatto", ruby: []  }
+                ],
+                [   {  lang: "br", word: "cachorro", ruby: []  },
+                    {  lang: "en", word: "dog",      ruby: []  },
+                    {  lang: "fr", word: "chien",    ruby: []  },
+                    {  lang: "ko", word: "개",       ruby: ["ge"]  },
+                    {  lang: "it", word: "cane",     ruby: []  }
+                ],
+                [   {  lang: "br", word: "banana", ruby: []  },
+                    {  lang: "en", word: "banana", ruby: []  },
+                    {  lang: "fr", word: "banane", ruby: []  },
+                    {  lang: "ko", word: "바나나",  ruby: ["ba","na","na"]  },
+                    {  lang: "it", word: "banana", ruby: []  }
+                ],
+                [   {  lang: "br", word: "chocolate",  ruby: []  },
+                    {  lang: "en", word: "chocolate",  ruby: []  },
+                    {  lang: "fr", word: "chocolat",   ruby: []  },
+                    {  lang: "ko", word: "초콜렛",      ruby: ["cho","kol","le"]  },
+                    {  lang: "it", word: "cioccolato", ruby: []  }
+                ]
+                //<<<<<<<<
+            ];
+            let available_words_length = available_words.length;
+
+            let current_word = 0;
+            let new_level = function() {
+                let uls = words_list.children;
+                for(let i = uls.length - 1; i >= 0; i--) {
+                    let ils = uls[i].children;
+                    for(let j = ils.length - 1; j >= 0; j--) {
+                        if(ils[j].tagName.toLowerCase() == "li") {
+                            ils[j].remove();
+                        }
+                    }
+                }
+                if(available_words.length > 0) {
+                    current_word = 0;
+                    for(let i = 0; i < WORD_AMOUNT; i++) {
+                        let ran = ~~(Math.random() * available_words.length);
+                        let current_word_obj = available_words.splice(ran, 1)[0];
+                        for(let j = 0; j < selected_languages.length; j++) {
+                            let word = document.createElement("li");
+                            word.dataset.id = current_word;
+                            word.onclick = function() {  select(word);  }
+
+                            for(let k = uls.length - 1; k >= 0; k--) {
+                                if(uls[k].dataset.lang == current_word_obj[j].lang) {
+                                    let len = current_word_obj[j].ruby.length;
+                                    if(len > 0 && ruby_active) {
+                                        let htmlbuffer = "<ruby>";
+                                        for(let l = 0; l < len; l++) {
+                                            htmlbuffer += current_word_obj[j].word[l];
+                                            htmlbuffer += "<rp>(</rp><rt>";
+                                            htmlbuffer += current_word_obj[j].ruby[l];
+                                            htmlbuffer += "</rt><rp>)</rp>";
+                                        }
+                                        word.innerHTML = htmlbuffer + "</ruby>";
+                                    } else {
+                                        word.innerText = current_word_obj[j].word;
+                                    }
+                                    uls[k].appendChild(word);
+                                    break;
+                                }
+                            }
+                        }
+                        current_word++;
+                    }
+                    for(let i = uls.length - 1; i >= 0; i--) {
+                        let lis = uls[i].children;
+                        let flag = lis[0];
+
+                        for(let j = lis.length; j >= 0; j--) {
+                            uls[i].appendChild(lis[~~(Math.random() * j)]);
+                        }
+                        uls[i].prepend(flag);
+                    }
+                }
+            }
+
+            let select = function(el) {
+                if(el.className != "done" && el.className != "selected") {
+                    let siblings = el.parentElement.children;
+                    for(let i = 0, l = siblings.length; i < l; i++) {
+                        if(siblings[i].className == "selected") {
+                            siblings[i].className = "";
+                        }
+                    }
+                    el.className = "selected";
+                    selected_words[el.parentElement.dataset.lang] = el.dataset.id;
+
+                    let done = true;
+                    for(let language in selected_words) {
+                        if(selected_words[language] != el.dataset.id) {
+                            done = false;
+                            break;
+                        }
+                    }
+
+                    if(done) {
+                        let sel = document.getElementsByClassName("selected");
+                        for(let i = sel.length-1; i >= 0; i--) {
+                            sel[i].className = "done";
+                        }
+                        done_count++;
+                        done = false;
+                    }
+
+                    if(done_count >= WORD_AMOUNT) {
+                        if(finish_amount >= ~~(available_words_length / 4)) {
+                            main.dataset.complete = "2";
+                        } else {
+                            main.dataset.complete = "1";
+                        }
+                    }
+                } else if(el.className == "selected") {
+                    el.className = "";
+                    selected_words[el.parentElement.dataset.lang] = -1;
+                }
+            }
+
+            let next = function() {
+                done_count = 0;
+                main.dataset.complete = "0";
+                let sel = document.getElementsByClassName("done");
+                for(let i = sel.length-1; i >= 0; i--) {
+                    sel[i].className = "";
+                }
+                selected_words = copy_object(LANGUAGES);
+                new_level();
+            }
+        </script>
+        <button id="next" onclick="next();"> next </button>
+    </div>
+    <hr/>
+    <div id="footer"> Made with <span id="heart">❤</span> by Matheus Avellar </div>
+    <!-- Obligatory VanillaJS framework -->
+    <script async src="/resources/vanilla.min.js" type="text/javascript"></script>
+</body>
+</html>
